@@ -35,5 +35,4 @@ NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:self.titleBa
 NSLayoutConstraint *left = constraintLeft(self.titleBar, self.view, 10);
 NSLayoutConstraint *top = constraintTop(self.titleBar, self.view, 0);
 NSArray *sizeConstraints = constraintsEqualSize(self.titleBar, nil, 50, 50);
-
 ```
