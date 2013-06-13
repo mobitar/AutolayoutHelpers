@@ -4,6 +4,8 @@
 //  Created by Mo Bitar on 5/8/13.
 //
 
+#import "UIView+Autolayout.h"
+
 #import <Foundation/Foundation.h>
 NSLayoutConstraint *constraintEqual(id item1, id item2, NSLayoutAttribute attribute, CGFloat offset);
 NSLayoutConstraint *constraintEqualAttributes(id item1, id item2, NSLayoutAttribute attribute1, NSLayoutAttribute attribute2, CGFloat offset);
@@ -26,3 +28,4 @@ NSArray *constraintsCenterWithOffset(id item, id centerTo, CGFloat xOffset, CGFl
 NSArray *constraintsEqualSize(id item1, id item2, CGFloat widthOffset, CGFloat heightOffset);
 NSArray *constraintsEqualPosition(id item1, id item2, CGFloat xOffset, CGFloat yOffset);
 NSArray *constraintsEqualSizeAndPosition(id item1, id item2);
+NSArray *constraintsHeightNotGreaterThanConstant(id item1, id item2, CGFloat constant);

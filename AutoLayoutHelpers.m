@@ -120,3 +120,14 @@ NSArray *constraintsEqualSizeAndPosition(id item1, id item2)
     [array addObjectsFromArray:constraintsEqualSize(item1, item2, 0, 0)];
     return array;
 }
+
+NSArray *constraintsHeightNotGreaterThanConstant(id item1, id item2, CGFloat constant)
+{
+    NSString *maxHeightFormat = [NSString stringWithFormat:@"V:[item1(<=%f)]", constant];
+    NSArray *heightMaxConstraints = [NSLayoutConstraint constraintsWithVisualFormat:maxHeightFormat options:0 metrics:nil
+                                                                              views:NSDictionaryOfVariableBindings(item1)];
+    
+    NSLayoutConstraint *heightDefaultConstraint = constraintHeight(item1, item2, 0);
+    heightDefaultConstraint.priority = 900;
+    return [@[heightDefaultConstraint] arrayByAddingObjectsFromArray:heightMaxConstraints];
+}
