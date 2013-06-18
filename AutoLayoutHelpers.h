@@ -31,3 +31,4 @@ NSArray *constraintsEqualSize(id item1, id item2, CGFloat widthOffset, CGFloat h
 NSArray *constraintsEqualPosition(id item1, id item2, CGFloat xOffset, CGFloat yOffset);
 NSArray *constraintsEqualSizeAndPosition(id item1, id item2);
 NSArray *constraintsHeightNotGreaterThanConstant(id item1, id item2, CGFloat constant);
+NSArray *constraintsHeightGreaterThanOrEqual(id item1, id item2);
