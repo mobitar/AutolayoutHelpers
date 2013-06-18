@@ -6,6 +6,14 @@
 
 #import "AutoLayoutHelpers.h"
 
+NSLayoutConstraint *constraintAttributeWithPriority(id item1, id item2, NSLayoutAttribute attribute,
+                                                    CGFloat offset, UILayoutPriority priority)
+{
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:item1 attribute:attribute relatedBy:NSLayoutRelationEqual toItem:item2 attribute:attribute multiplier:1.0 constant:offset];
+    constraint.priority = priority;
+    return constraint;
+}
+
 NSLayoutConstraint *constraintEqual(id item1, id item2, NSLayoutAttribute attribute, CGFloat offset)
 {
     return [NSLayoutConstraint constraintWithItem:item1 attribute:attribute relatedBy:NSLayoutRelationEqual toItem:item2 attribute:attribute multiplier:1.0 constant:offset];

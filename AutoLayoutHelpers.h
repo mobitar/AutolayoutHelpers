@@ -5,8 +5,10 @@
 //
 
 #import "UIView+Autolayout.h"
-
 #import <Foundation/Foundation.h>
+
+NSLayoutConstraint *constraintAttributeWithPriority(id item1, id item2, NSLayoutAttribute attribute,
+                                                    CGFloat offset, UILayoutPriority priority);
 NSLayoutConstraint *constraintEqual(id item1, id item2, NSLayoutAttribute attribute, CGFloat offset);
 NSLayoutConstraint *constraintEqualAttributes(id item1, id item2, NSLayoutAttribute attribute1, NSLayoutAttribute attribute2, CGFloat offset);
 NSLayoutConstraint *constraintEqualWithMultiplier(id item1, id item2, NSLayoutAttribute attribute, CGFloat offset, CGFloat multiplier);
