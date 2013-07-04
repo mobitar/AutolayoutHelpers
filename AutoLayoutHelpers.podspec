@@ -17,6 +17,8 @@ NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:self.titleBar
 ```
 NSLayoutConstraint *left = constraintLeft(self.titleBar, self.view, 10);
 ```
+
+As easy as that.
                    DESC
   s.homepage     = "https://github.com/mobitar/AutolayoutHelpers"
   s.license      = 'MIT'
