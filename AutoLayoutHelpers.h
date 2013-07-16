@@ -17,6 +17,7 @@ NSLayoutConstraint *constraintWidth(id item1, id item2, CGFloat offset);
 NSLayoutConstraint *constraintCenterX(id item1, id item2);
 NSLayoutConstraint *constraintCenterY(id item1, id item2);
 NSLayoutConstraint *constraintTrailVertically(id item1, id item2, CGFloat offset);
+NSLayoutConstraint *constraintTrailHorizontally(id item1, id item2, CGFloat offset);
 NSLayoutConstraint *constraintHeight(id item1, id item2, CGFloat offset);
 NSLayoutConstraint *constraintTop(id item1, id item2, CGFloat offset);
 NSLayoutConstraint *constraintBottom(id item1, id item2, CGFloat offset);
