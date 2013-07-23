@@ -53,13 +53,35 @@ NSArray *constraintsCenterWithOffset(id item, id centerTo, CGFloat xOffset, CGFl
     return @[horizontal, vertical];
 }
 
-NSLayoutConstraint *constraintCenterX(id item1, id item2) {
-    return [NSLayoutConstraint constraintWithItem:item1 attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:item2 attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
+NSLayoutConstraint *constraintCenterXWithOffset(id item1, id item2, CGFloat offset)
+{
+    return [NSLayoutConstraint constraintWithItem:item1 attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:item2 attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:offset];
+}
+
+NSLayoutConstraint *constraintCenterX(id item1, id item2)
+{
+    return constraintCenterXWithOffset(item1, item2, 0);
+}
+
+
+NSLayoutConstraint *constraintCenterYWithOffset(id item1, id item2, CGFloat offset)
+{
+    return [NSLayoutConstraint constraintWithItem:item1 attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:item2 attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:offset];
 }
 
 NSLayoutConstraint *constraintCenterY(id item1, id item2)
 {
-    return [NSLayoutConstraint constraintWithItem:item1 attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:item2 attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
+    return constraintCenterYWithOffset(item1, item2, 0);
+}
+
+NSLayoutConstraint *constraintLeadVertically(id item1, id item2, CGFloat offset)
+{
+    return [NSLayoutConstraint constraintWithItem:item1 attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:item2 attribute:NSLayoutAttributeTop multiplier:1.0 constant:offset];
+}
+
+NSLayoutConstraint *constraintLeadHorizontally(id item1, id item2, CGFloat offset)
+{
+    return [NSLayoutConstraint constraintWithItem:item1 attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:item2 attribute:NSLayoutAttributeLeft multiplier:1.0 constant:offset];
 }
 
 NSLayoutConstraint *constraintTrailVertically(id item1, id item2, CGFloat offset)

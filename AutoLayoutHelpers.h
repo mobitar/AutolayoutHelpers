@@ -9,20 +9,34 @@
 
 NSLayoutConstraint *constraintAttributeWithPriority(id item1, id item2, NSLayoutAttribute attribute,
                                                     CGFloat offset, UILayoutPriority priority);
+
 NSLayoutConstraint *constraintEqual(id item1, id item2, NSLayoutAttribute attribute, CGFloat offset);
 NSLayoutConstraint *constraintEqualAttributes(id item1, id item2, NSLayoutAttribute attribute1, NSLayoutAttribute attribute2, CGFloat offset);
 NSLayoutConstraint *constraintEqualWithMultiplier(id item1, id item2, NSLayoutAttribute attribute, CGFloat offset, CGFloat multiplier);
-NSLayoutConstraint *constraintEqualAttributesWithMultiplier(id item1, id item2, NSLayoutAttribute attribute1, NSLayoutAttribute attribute2, CGFloat offset, CGFloat multiplier);
-NSLayoutConstraint *constraintWidth(id item1, id item2, CGFloat offset);
+
+NSLayoutConstraint *constraintEqualAttributesWithMultiplier(id item1, id item2, NSLayoutAttribute attribute1,
+                                                            NSLayoutAttribute attribute2, CGFloat offset, CGFloat multiplier);
+
 NSLayoutConstraint *constraintCenterX(id item1, id item2);
+NSLayoutConstraint *constraintCenterXWithOffset(id item1, id item2, CGFloat offset);
+
 NSLayoutConstraint *constraintCenterY(id item1, id item2);
+NSLayoutConstraint *constraintCenterYWithOffset(id item1, id item2, CGFloat offset);
+
 NSLayoutConstraint *constraintTrailVertically(id item1, id item2, CGFloat offset);
 NSLayoutConstraint *constraintTrailHorizontally(id item1, id item2, CGFloat offset);
+
+NSLayoutConstraint *constraintLeadVertically(id item1, id item2, CGFloat offset);
+NSLayoutConstraint *constraintLeadHorizontally(id item1, id item2, CGFloat offset);
+
+NSLayoutConstraint *constraintWidth(id item1, id item2, CGFloat offset);
 NSLayoutConstraint *constraintHeight(id item1, id item2, CGFloat offset);
+
 NSLayoutConstraint *constraintTop(id item1, id item2, CGFloat offset);
 NSLayoutConstraint *constraintBottom(id item1, id item2, CGFloat offset);
 NSLayoutConstraint *constraintLeft(id item1, id item2, CGFloat offset);
 NSLayoutConstraint *constraintRight(id item1, id item2, CGFloat offset);
+
 NSLayoutConstraint *constraintAbsolute(id item1, NSLayoutAttribute attribute, CGFloat offset);
 
 NSArray *constraintsAbsoluteSize(id item, CGFloat width, CGFloat height);
